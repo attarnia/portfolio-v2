@@ -26,13 +26,13 @@ export default function Header() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/70 backdrop-blur-xl border-b border-white/10"
+          ? "border-b border-border/80 bg-background/70 backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
-        <a href="#home" className="text-2xl font-bold tracking-wide text-white">
-          Amir<span className="text-cyan-400">.</span>
+        <a href="#home" className="text-2xl font-bold tracking-wide text-foreground">
+          Amir<span className="text-primary">.</span>
         </a>
 
         <div className="hidden md:block">
@@ -42,19 +42,19 @@ export default function Header() {
         <a
           href="https://t.me/Aa_alfa"
           target="_blank"
-          className=" px-7 py-3 rounded-2xl bg-electro-blue hover:opacity-90 transition"
+          className="rounded-2xl bg-primary px-7 py-3 text-background transition hover:opacity-90"
         >
           Contact Me
         </a>
 
         <button
           onClick={toggle}
-          className="rounded-lg p-2 transition hover:bg-white/10 md:hidden"
+          className="rounded-lg p-2 transition hover:bg-surface-light md:hidden"
         >
           {isOpen ? (
-            <X className="h-6 w-6 text-white" />
+            <X className="h-6 w-6 text-foreground" />
           ) : (
-            <Menu className="h-6 w-6 text-white" />
+            <Menu className="h-6 w-6 text-foreground" />
           )}
         </button>
       </div>
@@ -64,7 +64,7 @@ export default function Header() {
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <div className="border-t border-white/10 bg-black/80 backdrop-blur-xl">
+        <div className="border-t border-border bg-background/80 backdrop-blur-xl">
           <nav className="px-6 py-6">
             <NavItem onClick={() => setIsOpen(false)} />
           </nav>

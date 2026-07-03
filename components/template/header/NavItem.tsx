@@ -47,14 +47,14 @@ export default function NavItem({ onClick }: Props) {
             onClick={onClick}
             className={`relative text-sm font-medium transition ${
               active === item.href
-                ? ""
+                ? "text-foreground"
                 : "text-white/70 hover:text-white"
             }`}
           >
             {item.label}
 
             <span
-              className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-electro-blue transition-all duration-300 ${
+              className={`absolute -bottom-1 left-0 h-0.5 rounded-full bg-primary transition-all duration-300 ${
                 active === item.href ? "w-full" : "w-0"
               }`}
             />

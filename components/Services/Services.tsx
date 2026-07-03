@@ -22,7 +22,7 @@ function Services() {
           <div className="reveal-item">
             <ServicesCard
               icon="/icon/pc-icon.png"
-              title="Web Design"
+              title="Web development"
               description="Designing clean, modern, and responsive user interfaces with attention to usability, performance, and visual consistency."
             />
           </div>

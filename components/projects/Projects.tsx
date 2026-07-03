@@ -41,10 +41,10 @@ function Projects() {
     <section ref={scope} className="my-24" id="projects">
       <div>
         <div className="section-heading text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[#E6E6E6]">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-foreground">
             My Projects
           </h2>
-          <p className="mt-2 text-sm sm:text-base text-[#A1A1AA]">
+          <p className="mt-2 text-sm sm:text-base text-muted">
             A selection of projects I have developed
           </p>
         </div>

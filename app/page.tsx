@@ -6,14 +6,15 @@ import Container from "@/components/ui/Container";
 
 function HomePage() {
   return (
-    <Container>
+    <>
       <Hero />
-      <Info />
-      <Services />
-      <Projects />
-    </Container>
+      <Container>
+        <Info />
+        <Services />
+        <Projects />
+      </Container>
+    </>
   );
 }
 
 export default HomePage;
-

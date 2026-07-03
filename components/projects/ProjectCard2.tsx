@@ -22,8 +22,7 @@ export default function ProjectCard2({
   title,
   description,
   demo,
-  tech = [],
-}: ProjectCard2Props) {
+  tech = [],}: ProjectCard2Props) {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
@@ -42,37 +41,41 @@ export default function ProjectCard2({
             trigger: cardRef.current,
             start: "top 85%",
           },
-        }
+        },
       );
     },
-    { scope: cardRef }
+    { scope: cardRef },
   );
 
   return (
     <div
       ref={cardRef}
-      className="w-full rounded-2xl bg-[#262626] text-foreground shadow-md hover:shadow-xl transition-shadow p-5"
+      className="group h-full w-full rounded-[1.6rem] border border-border/70 bg-surface/80 p-5 text-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
     >
-      {/* Image */}
-      <div className="relative w-full h-65 rounded-xl overflow-hidden bg-black/5">
-        <Image src={img} fill alt={title} className="object-contain" priority />
+      <div className="relative h-65 w-full overflow-hidden rounded-[1.2rem] bg-black/5">
+ 
+
+        <Image
+          src={img}
+          fill
+          alt={title}
+          className="object-contain transition-transform duration-500 group-hover:scale-105"
+          priority
+        />
       </div>
 
-      {/* Title */}
-      <h3 className="text-xl font-semibold mt-5 text-center">{title}</h3>
+      <h3 className="mt-5 text-center text-xl font-semibold">{title}</h3>
 
-      {/* Description */}
-      <p className="text-center text-sm mt-2 leading-relaxed opacity-80">
+      <p className="mt-2 text-center text-sm leading-relaxed text-muted">
         {description}
       </p>
 
-      {/* Tech Stack */}
       {Array.isArray(tech) && tech.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-2 mt-4">
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
           {tech.map((item) => (
             <span
               key={item}
-              className="px-3 py-1 text-xs rounded-full border border-electro-blue text-electro-blue"
+              className="rounded-full border border-primary/30 px-3 py-1 text-xs text-primary"
             >
               {item}
             </span>
@@ -80,13 +83,12 @@ export default function ProjectCard2({
         </div>
       )}
 
-      {/* Actions */}
-      <div className="flex justify-center mt-6">
+      <div className="mt-6 flex justify-center">
         <a
           href={demo}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-electro-blue text-black text-md font-bold hover:opacity-90 transition"
+          className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-background transition hover:opacity-90"
         >
           Live Demo
           <ExternalLink size={16} />
