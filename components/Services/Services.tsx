@@ -21,21 +21,21 @@ function Services() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           <div className="reveal-item">
             <ServicesCard
-              icon="/icon/pc-icon.png"
+              icon="/icon/pc-icon-blue.png"
               title="Web development"
               description="Designing clean, modern, and responsive user interfaces with attention to usability, performance, and visual consistency."
             />
           </div>
           <div className="reveal-item">
             <ServicesCard
-              icon="/icon/pc-icon.png"
+              icon="/icon/pc-icon-blue.png"
               title="SEO"
               description="Designing clean, modern, and responsive user interfaces with attention to usability, performance, and visual consistency."
             />
           </div>
           <div className="reveal-item">
             <ServicesCard
-              icon="/icon/pc-icon.png"
+              icon="/icon/pc-icon-blue.png"
               title="Ai Integrated"
               description="Designing clean, modern, and responsive user interfaces with attention to usability, performance, and visual consistency."
             />

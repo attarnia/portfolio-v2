@@ -1,4 +1,4 @@
-import { Github, Send, Linkedin, Phone } from "lucide-react";
+import { Github, Send, Linkedin, Phone, Instagram } from "lucide-react";
 
 function Footer() {
   return (
@@ -12,7 +12,8 @@ function Footer() {
             Ready to turn an idea into a polished product?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-muted sm:text-base">
-            I’m available for freelance collaborations, product launches, and full-time frontend opportunities.
+            I’m available for freelance collaborations, product launches, and
+            full-time frontend opportunities.
           </p>
 
           <a
@@ -59,6 +60,15 @@ function Footer() {
               aria-label="WhatsApp"
             >
               <Phone size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/aa_alfa13/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-border p-3 transition hover:bg-primary hover:text-background"
+              aria-label="Instagram"
+            >
+              <Instagram size={20} />
             </a>
           </div>
         </div>
